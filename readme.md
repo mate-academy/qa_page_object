@@ -10,13 +10,12 @@ Let's implement 3 classes with inheritance.
 
 ## PageObject
 
-- constructor takes `url`
+- constructor takes `url` and and assign it to `url` property
 - constructor contains `header` property which is an instance of `Header` class
 - should contain `clickOnLogo` method. The method should return a string 'Click on the' + `logo` from the `Header` class
 
 ## ArticlePage
 
-- should extend `PageObject` class
 - constructor taskes `url` and `slug`. Constructor should modify original `url` by adding `slug` at the end
 - should contain getter property `commentButton` which return '[Publish comment] button' string
 - should contain `clickOnCommentButton` method. The method should return a string 'Click on the' + `commentButton`
