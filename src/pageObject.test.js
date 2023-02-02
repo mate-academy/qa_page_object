@@ -74,7 +74,7 @@ describe('ArticlePage class', () => {
     const page = new ArticlePage('http://test.com', '/test');
 
     expect(page.clickOnCommentButton())
-      .toBe(`Click on ${page.commentButton}`);
+      .toBe(`Click on the ${page.commentButton}`);
   });
 
   it('should contain a "assertPageOpened" method', () => {
