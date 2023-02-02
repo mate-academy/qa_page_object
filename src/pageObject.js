@@ -12,7 +12,7 @@ class PageObject {
     this.header = new Header();
   }
 
-  clickLogo() {
+  clickOnLogo() {
     return `Click on the ${this.header.logo}`;
   }
 };
