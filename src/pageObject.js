@@ -13,14 +13,14 @@ class PageObject {
   }
 
   clickOnLogo() {
-    return `Click on the Conduit logo`;
+    return `Click on the ${this.header.logo}`;
   }
 };
 
 class ArticlePage extends PageObject {
-  constructor(url, header, slug) {
-    super(url, header);
-    this.slug = slug;
+  constructor(url, slug) {
+    super(url);
+    this.url = url + slug;
   }
 
   get commentButton() {
