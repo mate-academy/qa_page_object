@@ -30,7 +30,7 @@ class ArticlePage extends PageObject {
   assertPageOpened() {
     return 'The ' + `${this.url}` + ' is opened';
   }
-};
+}
 
 module.exports = {
   Header,
