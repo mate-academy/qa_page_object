@@ -2,7 +2,7 @@
 
 class Header {
   constructor () {
-    this.logo = 'Conduit';
+    this.logo = 'Conduit logo';
   }
 
   get logo () {
