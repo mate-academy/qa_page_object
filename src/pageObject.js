@@ -8,9 +8,8 @@ class Header {
 
 class PageObject extends Header {
   constructor(url){
-  super(logo);
   this.url = url;
-  this.header = Header();
+  this.header = new Header();
   }
 
   clickOnLogo() {
@@ -20,12 +19,13 @@ class PageObject extends Header {
 
 class ArticlePage extends PageObject {
   constructor(url,slug){
-    PageObject.url = url;
-    this.slug = slug
+    super(url);
+
+    this.url += slug;
   }
 
   get commentButton() {
-    return `${this.url} + ${this.slug}`;
+    return "[Publish comment] button";
   }
 
   clickOnCommentButton() {
