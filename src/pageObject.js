@@ -13,19 +13,18 @@ class PageObject {
   }
 
   clickOnLogo() {
-    return `Click on the ${this.logo}`;
+    return `Click on the ${this.header.logo}`;
   }
 };
 
 class ArticlePage extends PageObject {
   constructor (url, slug) {
     super (url)
-    this.newUrl = url + slug;
-    this.commentButton = '[Publish comment] button';
+    this.url = url + slug;
   }
 
   get commentButton () {
-    return this.commentButton;
+    return '[Publish comment] button';
   }
 
   clickOnCommentButton () {
