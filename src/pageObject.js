@@ -1,7 +1,5 @@
 'use strict';
 
-const { Linter } = require('eslint');
-
 class Header {
   get logo() {
     return 'Conduit logo';
