@@ -1,13 +1,9 @@
 'use strict';
 
 class Header {
-  constructor () {
-    this.logo = 'Conduit logo';
-  }
-
   get logo () {
-    return this.logo;
-  }
+    return 'Conduit logo';
+};
 };
 
 class PageObject {
