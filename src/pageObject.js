@@ -6,14 +6,14 @@ class Header {
  }
 };
 
-class PageObject extends Header {
-  constructor(url){
+class PageObject  {
+  constructor(url, header){
   this.url = url;
   this.header = new Header();
   }
 
   clickOnLogo() {
-    return `Click on the ${this.logo}`
+    return `Click on the ${this.header.logo}`
   }
 };
 
