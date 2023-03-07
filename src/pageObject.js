@@ -11,6 +11,7 @@ class PageObject {
     this.url = url;
     this.header = new Header();
   }
+
   clickOnLogo() {
     return `Click on the ${this.header.logo}`;
   }
@@ -25,10 +26,10 @@ class ArticlePage extends PageObject {
     return '[Publish comment] button';
   }
   clickOnCommentButton() {
-    return 'Click on the' + this.clickOnCommentButton;
+    return 'Click on the ${this.commentButton}';
   }
   assertPageOpened() {
-    return 'The' + this.url + 'is opened';
+    return 'The ${this.url} is opened';
   }
 };
 
