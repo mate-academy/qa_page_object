@@ -1,15 +1,34 @@
 'use strict';
 
 class Header {
-
+  logo = 'Conduit logo';
 };
 
 class PageObject {
+  constructor(url, header) {
+    this.url = url;
+    this.header = new Header();
+  }
 
+  clickOnLogo() {
+    return `Click on the ${this.header.logo}`;
+  }
 };
 
 class ArticlePage extends PageObject {
+  commentButton = '[Publish comment] button';
+  constructor(url, header, slug) {
+    super(url, header);
+    this.url += slug;
+  }
 
+  clickOnCommentButton() {
+    return `Click on the ${this.commentButton}`;
+  }
+
+  assertPageOpened() {
+    return `The ${this.url} is opened`;
+  }
 };
 
 module.exports = {
