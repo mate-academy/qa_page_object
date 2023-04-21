@@ -24,7 +24,7 @@ class ArticlePage extends PageObject {
   constructor(url, slug) {
     super(url);
     this.slug = slug;
-    this.url = `${url}+${slug}`;
+    this.url = `${url}/${slug}`;
   }
   clickOnCommentButton() {
     return 'Click on the ' + this.commentButton;
