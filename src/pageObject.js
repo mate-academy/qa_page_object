@@ -1,7 +1,9 @@
 'use strict';
 
 class Header {
-  logo = 'Conduit logo';
+  constructor() {
+    this.logo = 'Conduit logo';
+  }
 };
 
 class PageObject {
@@ -17,7 +19,8 @@ class PageObject {
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-    super(url + slug);
+    super(url);
+    this.url += slug;
   }
 
   get commentButton() {
