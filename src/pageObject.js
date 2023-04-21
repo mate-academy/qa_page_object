@@ -1,11 +1,13 @@
 'use strict';
 
 class Header {
-  logo = 'Conduit logo';
+  get logo() {
+    return ('Conduit logo');
+  }
 };
 
 class PageObject {
-  constructor(url, header) {
+  constructor(url) {
     this.url = url;
     this.header = new Header();
   }
@@ -16,9 +18,11 @@ class PageObject {
 };
 
 class ArticlePage extends PageObject {
-  commentButton = '[Publish comment] button';
-  constructor(url, header, slug) {
-    super(url, header);
+  get commentButton() {
+    return ('[Publish comment] button');
+  }
+  constructor(url, slug) {
+    super(url);
     this.url += slug;
   }
 
