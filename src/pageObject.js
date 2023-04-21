@@ -6,9 +6,8 @@ class Header {
   }
 };
 
-class PageObject extends Header {
+class PageObject {
   constructor(url) {
-    super();
     this.url = url;
     this.header = new Header();
   }
