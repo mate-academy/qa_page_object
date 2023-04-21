@@ -6,14 +6,10 @@ class Header {
   }
 };
 
-class PageObject extends Header {
+class PageObject {
   constructor(url) {
-    super();
     this.url = url;
-  }
-
-  get header() {
-    return new Header();
+    this.header = new Header();
   }
 
   clickOnLogo() {
@@ -24,7 +20,7 @@ class PageObject extends Header {
 class ArticlePage extends PageObject {
   constructor(url, slug) {
     super(url);
-    this.slug = slug;
+    this.url += slug;
   }
 
   get commentButton() {
