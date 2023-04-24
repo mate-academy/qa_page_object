@@ -7,7 +7,7 @@ class Header {
 };
 
 class PageObject {
-  сonstructor(url) {
+  onstructor(url) {
     this.url = url;
     this.header = new Header();
   }
@@ -18,7 +18,9 @@ class PageObject {
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-  this.url = url + '/' + slug;
+  super.url = url + '/' + slug;
+  super(url);
+  this.slug = slug;
   }
   get commentButton() {
     return '[Publish comment] button';
