@@ -1,18 +1,21 @@
 'use strict';
 
 class Header {
-  logo = 'Conduit logo';
+  get logo() {
+    return 'Conduit logo';
+  }
 };
 
-class PageObject extends Header {
+class PageObject {
   header = new Header();
   constructor(url) {
-    super();
+    // super();
+    this.header = new Header();
     this.url = url;
   }
 
   clickOnLogo() {
-    return `Click on the ${this.logo}`;
+    return `Click on the ${this.header.logo}`;
   }
 };
 
