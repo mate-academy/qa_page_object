@@ -2,7 +2,7 @@
 
 class Header {
   get logo() {
-return 'Conduit logo'
+    return 'Conduit logo';
   }
 
   constructor(name) {
@@ -10,36 +10,36 @@ return 'Conduit logo'
   }
 }
 
-
 class PageObject {
-  constructor(url) { 
-   this.url = url;
-   this.header = new Header();
-    }
+  constructor(url) {
+    this.url = url;
+    this.header = new Header();
+  }
 
-   clickOnLogo() {
+  clickOnLogo() {
     return `Click on the ${this.header.logo}`;
-  } 
+  }
 }
 
 class ArticlePage extends PageObject {
- constructor(url, slug) {
+  constructor(url, slug) {
     super(url);
     this.slug = slug;
   }
-  
-   get commentButton() {
+
+  get commentButton() {
     return `[Publish comment] button`;
   }
-clickOnCommentButton() {
+  clickOnCommentButton() {
     return `Click on the ${this.commentButton}`;
-  } 
+  }
   assertPageOpened() {
     return `The ${this.url} is opened`;
   }
 }
+
 module.exports = {
   Header,
   PageObject,
   ArticlePage,
-}
+};
