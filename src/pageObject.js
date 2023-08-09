@@ -4,7 +4,7 @@ class Header {
   constructor() {
     this.logo = 'Conduit logo';
   }
-};
+}; 
 
 class PageObject {
   constructor(url) {
