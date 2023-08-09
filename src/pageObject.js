@@ -23,7 +23,7 @@ class ArticlePage extends PageObject {
   };
 
   constructor(url, slug) {
-    super();
+    super(url);
     this.url += this.slug;
   }
 
