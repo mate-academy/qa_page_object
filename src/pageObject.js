@@ -17,16 +17,18 @@ class PageObject {
 };
 
 class ArticlePage extends PageObject {
-  constructor(url, articleId) {
+  constructor(url, slug) {
     super(url);
-    this.articleId = articleId;
-    this.commentButton = '[Publish comment] button';
+    this.url = url + slug;
+  }
+  get commentButton() {
+    return '[Publish comment] button';
   }
   clickOnCommentButton() {
-    return `Click on the ${this.commentButton}`;
+    return 'Click on the' + ' ' + this.commentButton;
   }
   assertPageOpened() {
-    return `The ${this.url} is opened`;
+    return 'The' + ' ' + this.url + ' ' + 'is opened';
   }
 };
 
