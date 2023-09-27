@@ -9,8 +9,8 @@ class Header {
 class PageObject {
   constructor(url) {
     this.url = url;
+    this.header = new Header();
   }
-  header = new Header();
 
   clickOnLogo() {
     return `Click on the ${this.header.logo}`;
