@@ -10,16 +10,20 @@ class Header {
   }
 }
 
-
 class PageObject {
   constructor(url) {
     this.url = url;
     this.header = new Header();
   }
+
+  clickOnLogo() {
+    return this.header.clickOnLogo();
+  }
 }
 
-class ArticlePage {
+class ArticlePage extends PageObject {
   constructor(url, slug) {
+    super(url);
     this.url = url + '/' + slug;
   }
 
