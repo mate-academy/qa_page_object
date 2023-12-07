@@ -18,6 +18,11 @@ class PageObject {
 };
 
 class ArticlePage extends PageObject {
+  constructor(url, slug) {
+    super(url);
+    this.url = `${this.url}/${slug}`;
+  }
+
   get commentButton() {
     return '[Publish comment] button';
   }
@@ -29,7 +34,7 @@ class ArticlePage extends PageObject {
   assertPageOpened() {
     return 'The ' + this.url + ' is opened';
   }
-};
+}
 
 module.exports = {
   Header,
