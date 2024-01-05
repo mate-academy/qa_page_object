@@ -7,30 +7,34 @@ class Header {
 };
 
 class PageObject {
-  constructor(url, header) {
-    this.url = 'http://test.com';
-  }
+  constructor(url) {
+    this.url = url;
+    this.header = new Header();
+  };
+
   clickOnLogo() {
-    console.log(`Click on the ${this.logo}`);
-  }
+    return `Click on the ${this.header.logo}`;
+  };
 };
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
     super(url);
-    this.newUrl = this.url + slug;
+    this.url = url + slug;
   }
+
   get commentButton() {
     return '[Publish comment] button';
   }
+
   clickOnCommentButton() {
-    return 'Click on the ' + this.commentButton;
+    return `Click on the ${this.commentButton}`;
   }
+
   assertPageOpened() {
-    return 'The ' + this.url + ' is opened';
+    return `The ${this.url} is opened`;
   }
 };
-
 module.exports = {
   Header,
   PageObject,
