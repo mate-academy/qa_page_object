@@ -35,6 +35,7 @@ class ArticlePage extends PageObject {
     return `The ${this.url} is opened`;
   }
 };
+
 module.exports = {
   Header,
   PageObject,
