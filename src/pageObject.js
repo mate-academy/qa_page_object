@@ -15,7 +15,6 @@ class PageObject {
   get logo() {
     return this.header.logo;
   }
-
   clickOnLogo() {
     return `Click on the ${this.logo}`;
   };
