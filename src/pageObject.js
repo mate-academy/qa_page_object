@@ -24,7 +24,7 @@ class ArticlePage extends PageObject {
     return 'Click on the [Publish comment] button';
   };
   assertPageOpened() {
-    return 'The ' + url + 'is opened';
+    return `The ${this.url} is opened`;
   }
 };
 
