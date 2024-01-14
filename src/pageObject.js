@@ -20,15 +20,13 @@ class PageObject {
   clickOnLogo() {
     return `Click on the ${this.header.logo}`;
   }
-  assertPageOpened() {
-    return `The ${this.url} is opened`;
-}
 };
+
 class ArticlePage extends PageObject {
 constructor(url, slug) {
-  super(url + '/' + slug);
+  super(url);
 
-    this.slug = slug;
+    this.url += slug;
 }
 
 get commentButton() {
@@ -37,6 +35,10 @@ get commentButton() {
 
 clickOnCommentButton() {
     return `Click on the ${this.commentButton}`;
+}
+
+assertPageOpened() {
+  return `The ${this.url} is opened`;
 }
 };
 
