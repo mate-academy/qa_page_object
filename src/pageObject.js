@@ -1,8 +1,11 @@
 'use strict';
 
+const commentButton = '[Publish comment] button';
+const logo = 'Conduit logo';
+
 class Header {
   get logo() {
-    return 'Conduit logo';
+    return logo;
   };
 };
 
@@ -12,16 +15,21 @@ class PageObject {
     this.header = new Header();
   };
   clickOnLogo() {
-    return 'Click on the Conduit logo';
+    return 'Click on the ' + logo;
   };
 };
 
 class ArticlePage extends PageObject {
-  get commentButton() {
-    return '[Publish comment] button';
+  constructor(url, slug) {
+    super(url);
+    this.url = url + slug;
   };
+  get commentButton() {
+    return commentButton;
+  };
+
   clickOnCommentButton() {
-    return 'Click on the [Publish comment] button';
+    return 'Click on the ' + commentButton;
   };
   assertPageOpened() {
     return `The ${this.url} is opened`;
