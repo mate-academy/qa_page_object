@@ -16,7 +16,7 @@ Let's implement 3 classes with inheritance.
 
 ## ArticlePage
 
-- constructor taskes `url` and `slug`. Constructor should modify original `url` by adding `slug` at the end
+- constructor takes `url` and `slug`. Constructor should modify original `url` by adding `slug` at the end
 - should contain getter property `commentButton` which return '[Publish comment] button' string
 - should contain `clickOnCommentButton` method. The method should return a string 'Click on the' + `commentButton`
 - should contain `assertPageOpened` method. The method should return a string 'The ' + `url` + 'is opened`
