@@ -1,5 +1,5 @@
 'use strict';
-
+// Added classes
 class Header {
   get logo() {
     return 'Conduit logo';
