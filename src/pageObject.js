@@ -19,7 +19,7 @@ class PageObject {
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-    super(url, new Header());
+    super(url);
     this.url = url + slug;
   }
   get commentButton() {
