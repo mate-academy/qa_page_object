@@ -14,7 +14,7 @@ class PageObject {
     this.header = new Header(headerLogo);
   }
   clickOnLogo(){
-    return 'Click on the' + this.header.logo;
+    return 'Click on the ' + this.header.logo;
   }
 
 };
@@ -25,11 +25,13 @@ class ArticlePage extends PageObject {
     this.url = url + slug;
     this.commentButton = '[Publish comment] button';
   }
-  clickOnTheCommentButton(){
-    return 'Click on the' + this.commentButton
+
+  clickOnCommentButton(){
+    return 'Click on the ' + this.commentButton;
   }
+
   assertPageOpened(){
-    return 'The ' + this.url + ' is opened'
+    return 'The ' + this.url + ' is opened';
   }
 };
 
