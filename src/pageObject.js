@@ -21,6 +21,7 @@ class PageObject {
 
 class ArticlePage extends PageObject {
   constructor(url, slug){
+    super()
     this.url = url + slug
     this.commentButton = '[Publish comment] button'
   }
