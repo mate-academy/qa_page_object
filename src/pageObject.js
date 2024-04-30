@@ -9,12 +9,12 @@ class Header {
 };
 
 class PageObject {
-  constructor(headerlogo, url){
-    this.header = new Header(headerlogo);
+  constructor(url, headerLogo){
     this.url = url;
+    this.header = new Header(headerLogo);
   }
   clickOnLogo(){
-    return 'Click on the' + this.headerlogo
+    return 'Click on the' + this.header.logo;
   }
 
 };
@@ -22,14 +22,14 @@ class PageObject {
 class ArticlePage extends PageObject {
   constructor(url, slug){
     super()
-    this.url = url + slug
-    this.commentButton = '[Publish comment] button'
+    this.url = url + slug;
+    this.commentButton = '[Publish comment] button';
   }
   clickOnTheCommentButton(){
     return 'Click on the' + this.commentButton
   }
   assertPageOpened(){
-    return 'The' + this.url + 'is opened'
+    return 'The ' + this.url + ' is opened'
   }
 };
 
