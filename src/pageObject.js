@@ -9,7 +9,7 @@ class Header {
 class PageObject {
   constructor(url) {
     this.url = url;
-    this.Header = new Header();
+    this.header = new Header();
   }
 
   clickOnLogo() {
