@@ -13,7 +13,7 @@ class PageObject {
   }
 
   clickOnLogo() {
-    return `Click on the ${this.Header.logo}`;
+    return `Click on the ${this.header.logo}`;
   }
 };
 
