@@ -2,42 +2,47 @@
 
 const { Header, PageObject, ArticlePage } = require('./pageObject');
 
-const logo = 'Conduit logo';
-const url = 'http://test.com';
-const slug = '/article';
-const header = new Header();
-const page = new PageObject(url);
-const articlePage = new ArticlePage(url, slug);
-
 describe('Header class', () => {
   it('should create an instance of Header', () => {
+    const header = new Header();
+
     expect(header)
       .toBeInstanceOf(Header);
   });
 
   it('should contain a logo element', () => {
+    const header = new Header();
+
     expect(header.logo)
-      .toBe(logo);
+      .toBe('Conduit logo');
   });
 });
 
 describe('PageObject class', () => {
   it('should create an instance of PageObject', () => {
+    const page = new PageObject('http://test.com');
+
     expect(page)
       .toBeInstanceOf(PageObject);
   });
 
   it('should contain a url property', () => {
+    const page = new PageObject('http://test.com');
+
     expect(page.url)
-      .toBe(url);
+      .toBe('http://test.com');
   });
 
   it('should contain a header element as an instanse of Header', () => {
+    const page = new PageObject('http://test.com');
+
     expect(page.header)
       .toBeInstanceOf(Header);
   });
 
   it('should contain a "clickOnLogo" method', () => {
+    const page = new PageObject('http://test.com');
+
     expect(page.clickOnLogo())
       .toBe(`Click on the ${page.header.logo}`);
   });
@@ -45,34 +50,37 @@ describe('PageObject class', () => {
 
 describe('ArticlePage class', () => {
   it('should create an instance of ArticlePage', () => {
-    expect(articlePage)
+    const page = new ArticlePage('http://test.com', '/test-slug');
+
+    expect(page)
       .toBeInstanceOf(ArticlePage);
   });
 
   it('should extend the PageObject class', () => {
-    expect(articlePage)
+    const page = new ArticlePage('http://test.com', '/test-slug');
+
+    expect(page)
       .toBeInstanceOf(PageObject);
-
-    expect(articlePage.url).toBe(url + slug);
-  });
-
-  it('should contain a "url" property contatenated with slug', () => {
-    expect(articlePage.url)
-      .toBe(url + slug);
   });
 
   it('should contain a "commentButton" property', () => {
-    expect(articlePage.commentButton)
+    const page = new ArticlePage('http://test.com', '/test');
+
+    expect(page.commentButton)
       .toBe(`[Publish comment] button`);
   });
 
   it('should contain a "clickOnCommentButton" method', () => {
-    expect(articlePage.clickOnCommentButton())
-      .toBe(`Click on the ${articlePage.commentButton}`);
+    const page = new ArticlePage('http://test.com', '/test');
+
+    expect(page.clickOnCommentButton())
+      .toBe(`Click on the ${page.commentButton}`);
   });
 
   it('should contain a "assertPageOpened" method', () => {
-    expect(articlePage.assertPageOpened())
-      .toBe(`The ${articlePage.url} is opened`);
+    const page = new ArticlePage('http://test.com', '/test');
+
+    expect(page.assertPageOpened())
+      .toBe(`The ${page.url} is opened`);
   });
 });
