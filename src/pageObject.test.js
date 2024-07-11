@@ -19,7 +19,7 @@ describe('Header class', () => {
     expect(header.logo)
       .toBe(logo);
   });
-});
+}); 
 
 describe('PageObject class', () => {
   it('should create an instance of PageObject', () => {
