@@ -24,5 +24,17 @@
   },
   "mateAcademy": {
     "projectType": "javascript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JedrzejewskiJakub/qa_page_object.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/JedrzejewskiJakub/qa_page_object/issues"
+  },
+  "homepage": "https://github.com/JedrzejewskiJakub/qa_page_object#readme",
+  "dependencies": {
+    "cypress": "^13.14.2"
   }
 }
