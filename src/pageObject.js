@@ -20,9 +20,9 @@ class PageObject {
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-    super(url + slug);
+    super();
 
-    this.slug = slug;
+    this.url = url + slug;
   }
 
   get commentButton() {
@@ -30,11 +30,11 @@ class ArticlePage extends PageObject {
   }
 
   clickOnCommentButton() {
-    return 'Click on the ' + this.commentButton;
+    return `Click on the ${this.commentButton}`;
   }
 
   assertPageOpened() {
-    return 'The ' + this.url + ' is opened';
+    return `The ${this.url} is opened`;
   }
 }
 
