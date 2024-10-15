@@ -2,37 +2,42 @@
 
 class Header {
   get logo() {
-    return 'Conduit logo';
+    // Returning a mock element for now
+    return { element: 'Conduit logo' };
   }
 }
 
 class PageObject {
-  constructor(url) {
+  constructor(url, header) {
     this.url = url;
-    this.header = new Header();
+    this.header = header;
   }
 
   // Placeholder method for future functionality
   clickOnLogo() {
-    return `Click on the ${this.header.logo}`;
+    // Simulate clicking on the logo element
+    return `Click on the ${this.header.logo.element}`;
   }
 }
 
 class ArticlePage extends PageObject {
-  constructor(url, slug) {
-    super(url + slug);
+  constructor(url, slug, header) {
+    super(url + slug, header);
   }
 
   get commentButton() {
-    return '[Publish comment] button';
+    // Returning a mock element for now
+    return { element: '[Publish comment] button' };
   }
 
   // Placeholder method for future functionality
   clickOnCommentButton() {
-    return `Click on the ${this.commentButton}`;
+    // Simulate clicking on the comment button element
+    return `Click on the ${this.commentButton.element}`;
   }
 
   assertPageOpened() {
+    // Simulate checking if certain elements are present on the page
     return `The ${this.url} is opened`;
   }
 }
