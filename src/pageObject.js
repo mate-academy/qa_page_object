@@ -1,40 +1,44 @@
 'use strict';
 
 class Header {
-
-  get logo() {
-    return 'Conduit logo';
+  constructor(logo = 'Conduit logo') {
+    this.logo = logo;
   }
-};
+
+  getLogo() {
+    return this.logo;
+  }
+}
 
 class PageObject {
-  constructor(url) {
+  constructor(url, header = new Header()) {
     this.url = url;
-    this.header = new Header();
+    this.header = header;
   }
+
   clickOnLogo() {
-    return `Click on the ${this.header.logo}`;
+    return `Click on the ${this.header.getLogo()}`;
   }
-};
+}
 
 class ArticlePage extends PageObject {
-  constructor(url, slug) {
-    super(url);
-    this.url = url + slug;
+  constructor(url, slug, header = new Header()) {
+    super(url, header);
+    this.fullUrl = `${url}${slug}`;
   }
 
-  get commentButton() {
+  getCommentButtonLabel() {
     return '[Publish comment] button';
-  };
+  }
 
   clickOnCommentButton() {
-    return `Click on the ${this.commentButton}`;
+    return `Click on the ${this.getCommentButtonLabel()}`;
   }
 
   assertPageOpened() {
-    return `The ${this.url} is opened`;
+    return `The ${this.fullUrl} is opened`;
   }
-};
+}
 
 module.exports = {
   Header,
