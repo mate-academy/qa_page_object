@@ -8,9 +8,9 @@ class Header {
 }
 
 class PageObject {
-  constructor(url, header) {
+  constructor(url) {
     this.url = url;
-    this.header = header;
+    this.header = new Header();
   }
 
   // Placeholder method for future functionality
@@ -21,8 +21,8 @@ class PageObject {
 }
 
 class ArticlePage extends PageObject {
-  constructor(url, slug, header) {
-    super(url + slug, header);
+  constructor(url, slug) {
+    super(url + slug);
   }
 
   get commentButton() {
