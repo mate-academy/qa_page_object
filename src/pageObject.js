@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 class Header {
   get logo() {
-    return 'Conduit logo';
+    return "Conduit logo";
   }
 }
 
@@ -19,14 +19,14 @@ class PageObject extends Header {
 }
 
 class ArticlePage extends PageObject {
-  constructor(url, slug, commentButton) {
+  constructor(url, slug) {
     super(url);
     this.slug = slug;
     this.url += slug;
   }
 
   get commentButton() {
-    return '[Publish comment] button';
+    return "[Publish comment] button";
   }
 
   clickOnCommentButton() {
