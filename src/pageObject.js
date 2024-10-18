@@ -12,14 +12,14 @@ class PageObject {
     this.header = new Header();
   }
   clickOnLogo() {
-    return 'Click on the' + this.header.logo;
+    return `Click on the ${this.header.logo}`;
   }
 };
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
     super(url);
-    this.url = `${url} + ${slug}`;
+    this.url = `${url}${slug}`;
   }
   get commentButton() {
     return '[Publish comment] button';
