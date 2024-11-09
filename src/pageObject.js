@@ -1,7 +1,7 @@
 'use strict';
 
 class Header {
-  logo() {
+  get logo() {
     return 'Conduit logo';
   }
 };
@@ -26,7 +26,7 @@ class ArticlePage extends PageObject {
     super(url, slug);
   }
 
-  commentButton() {
+  get commentButton() {
     return cy.get('[Publish comment] button');
   }
 
