@@ -4,40 +4,35 @@ class Header {
   get logo() {
     return 'Conduit logo';
   }
-};
+}
 
 class PageObject {
-  constructor(url, slug) {
-    this.url = url + slug;
-    this.header = new Header();
+  constructor(url) {
+    this.url = url;
   }
 
   visit() {
     cy.visit(this.url); 
   }
-
-  clickOnLogo() {
-    return `Click on the ${this.header.logo()}`;
-  }
-};
+}
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-    super(url, slug);
+    super(url + slug);
   }
 
   get commentButton() {
-    return cy.get('[Publish comment] button');
+    return cy.get('.publish-comment-button'); 
   }
 
   clickOnCommentButton() {
-    return `Click on the ${this.commentButton()}`;
+    return `Click on the ${this.commentButton}`; 
   }
 
   assertPageOpened() {
-    return `The ${url} is opened`;
+    return `The ${this.url} is opened`;
   }
-};
+}
 
 module.exports = {
   Header,
