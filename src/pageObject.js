@@ -1,13 +1,16 @@
 'use strict';
 
 class Header {
-  logo = 'Conduit logo';
+  get logo() {
+    return 'Conduit logo';
+  }
 }
 
 class PageObject {
-  url = 'http://test.com';
-
-  header = new Header();
+  constructor(url) {
+    this.url = url;
+    this.header = new Header();
+  }
 
   clickOnLogo() {
     return `Click on the ${this.header.logo}`;
@@ -15,8 +18,15 @@ class PageObject {
 }
 
 class ArticlePage extends PageObject {
-  url = 'http://test.com/article';
-  commentButton = '[Publish comment] button';
+  constructor(url, slug) {
+    super();
+    this.url = url + slug;
+  }
+
+  get commentButton() {
+    return '[Publish comment] button';
+  }
+
   clickOnCommentButton() {
     return `Click on the ${this.commentButton}`;
   }
