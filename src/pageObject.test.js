@@ -62,8 +62,7 @@ describe('ArticlePage class', () => {
   });
 
   it('should contain a "commentButton" property', () => {
-    expect(articlePage.commentButton)
-      .toBe(`[Publish comment] button`);
+    expect(articlePage.commentButton).toBe(`[Publish comment] button`);
   });
 
   it('should contain a "clickOnCommentButton" method', () => {
@@ -72,7 +71,8 @@ describe('ArticlePage class', () => {
   });
 
   it('should contain a "assertPageOpened" method', () => {
-    expect(articlePage.assertPageOpened())
-      .toBe(`The ${articlePage.url} is opened`);
+    expect(articlePage.assertPageOpened()).toBe(
+      `The ${articlePage.url} is opened`
+    );
   });
 });
