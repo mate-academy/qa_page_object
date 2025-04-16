@@ -2,11 +2,11 @@
 
 class Header {
   constructor() {
-    this._logo = 'Conduit logo'; // Changed to private property
+    this._logo = 'Conduit logo';
   }
 
   get logo() {
-    return this._logo; // Getter for logo
+    return this._logo;
   }
 
   clickOnLogo() {
@@ -24,32 +24,32 @@ class Header {
 
 class PageObject {
   constructor(url) {
-    this.url = url; // Assign url to the property
-    this.header = new Header(); // Create an instance of Header
+    this.url = url;
+    this.header = new Header();
   }
 
   clickOnLogo() {
-    return 'Click on the ' + this.header.logo; // Use the logo from Header
+    return 'Click on the ' + this.header.logo;
   }
 };
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-    super(url); // Call the parent constructor
-    this.url += slug; // Modify the URL by appending the slug
+    super(url);
+    this.url += slug;
     this.title = 'Article Page';
   }
 
   get commentButton() {
-    return '[Publish comment] button'; // Getter for commentButton
+    return '[Publish comment] button';
   }
 
   clickOnCommentButton() {
-    return 'Click on the ' + this.commentButton; // Use the commentButton getter
+    return 'Click on the ' + this.commentButton;
   }
 
   assertPageOpened() {
-    return 'The ' + this.url + ' is opened'; // Assert the page is opened
+    return 'The ' + this.url + ' is opened';
   }
 };
 
