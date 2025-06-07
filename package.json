@@ -1,5 +1,6 @@
 {
   "name": "js-page-object",
+  "type": "module",
   "version": "1.0.0",
   "description": "js page object",
   "main": "src/sum.js",
