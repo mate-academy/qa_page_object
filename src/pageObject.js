@@ -21,12 +21,12 @@ class ArticlePage extends PageObject {
     this.slug = slug;
   }
 
-  commentButton() {
+  get commentButton() {
     return `[Publish comment] button`;
   }
 
   clickOnCommentButton() {
-    return `Click on the ${this.commentButton()}`;
+    return `Click on the ${this.commentButton}`;
   }
 
   assertPageOpened() {
