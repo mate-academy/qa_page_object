@@ -18,10 +18,13 @@ class PageObject {
 };
 
 class ArticlePage extends PageObject {
-  commentButton = '[Publish comment] button';
   constructor(url, slug) {
     super(url);
     this.url += slug;
+  }
+
+  get commentButton() {
+    return '[Publish comment] button';
   }
 
   clickOnCommentButton() {
