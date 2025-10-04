@@ -1,3 +1,4 @@
+// Changes
 'use strict';
 
 class Header {
