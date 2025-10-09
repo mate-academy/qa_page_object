@@ -13,13 +13,13 @@ class PageObject {
   }
 
   clickOnLogo() {
-    return `Click on the ${this.header.logo}`;
+    return 'Click on the' + this.header.logo;
   }
 }
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-    super(url + slug);
+    super(url.replace(/\/$/, '') + slug);
   }
 
   get commentButton() {
@@ -27,11 +27,11 @@ class ArticlePage extends PageObject {
   }
 
   clickOnCommentButton() {
-    return `Click on the ${this.commentButton}`;
+    return 'Click on the' + this.commentButton;
   }
 
   assertPageOpened() {
-    return `The ${this.url} is opened`;
+    return 'The ' + this.url + 'is opened';
   }
 }
 
@@ -40,4 +40,3 @@ module.exports = {
   PageObject,
   ArticlePage,
 };
-
