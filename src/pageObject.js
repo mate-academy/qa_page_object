@@ -13,26 +13,22 @@ class PageObject {
   }
 
   clickOnLogo() {
-    return `Click on the ${this.header.logo}`
+    return `Click on the ${this.header.logo}`;
   }
 };
 
 class ArticlePage extends PageObject {
   constructor(url, slug) {
-    super(url);
-    this.url = `${url}/${slug}`
-  };
-
+    super(url + slug);
+  }
   get commentButton() {
     return `[Publish comment] button`;
   }
-
   clickOnCommentButton() {
-    return `Click on the ${this.commentButton}`
+    return `Click on the ${this.commentButton}`;
   }
-
   assertPageOpened() {
-    return `The ${this.url} is opened`
+    return `The ${this.url} is opened`;
   }
 };
 
