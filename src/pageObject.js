@@ -34,7 +34,7 @@ class ArticlePage extends PageObject {
   }
 
   assertPageOpened() {
-    return `The ${this.url} is opened`;
+    return 'The ' + `${this.url}` + 'is opened';
   }
 };
 
