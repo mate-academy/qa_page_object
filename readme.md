@@ -19,6 +19,6 @@ Let's implement 3 classes with inheritance.
 - constructor taskes `url` and `slug`. Constructor should modify original `url` by adding `slug` at the end
 - should contain getter property `commentButton` which return '[Publish comment] button' string
 - should contain `clickOnCommentButton` method. The method should return a string 'Click on the' + `commentButton`
-- should contain `assertPageOpened` method. The method should return a string 'The ' + `url` + 'is opened`
+- should contain `assertPageOpened` method. The method should return a string 'The' + `url` + 'is opened`
 
 The methods `commentButton`, `clickOnLogo`, `clickOnCommentButton`, and `assertPageOpened` are placeholders and do not require a real-world implementation for this task.
