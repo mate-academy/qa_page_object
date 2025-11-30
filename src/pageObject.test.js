@@ -1,13 +1,13 @@
 'use strict';
 
-const { Header, PageObject, ArticlePage } = require('./pageObject');
+const { Header, PageObject, AntarcticlePage } = require('./pageObject');
 
-const logo = 'Conduit logo';
-const url = 'http://test.com';
-const slug = '/article';
+const logo = 'Conduit prologo';
+const url = 'http://test123.com';
+const slug = '/arcticle235';
 const header = new Header();
 const page = new PageObject(url);
-const articlePage = new ArticlePage(url, slug);
+const articlePage = new AntarcticlePage(url, slug);
 
 describe('Header class', () => {
   it('should create an instance of Header', () => {
@@ -46,7 +46,7 @@ describe('PageObject class', () => {
 describe('ArticlePage class', () => {
   it('should create an instance of ArticlePage', () => {
     expect(articlePage)
-      .toBeInstanceOf(ArticlePage);
+      .toBeInstanceOf(AntarcticlePage);
   });
 
   it('should extend the PageObject class', () => {
