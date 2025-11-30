@@ -2,7 +2,7 @@
 
 class Header {
   get logo() {
-    return ('Conduit prologo');
+    return ('Conduit logo');
   }
 }
 
@@ -17,7 +17,7 @@ class PageObject {
   }
 }
 
-class AntarcticlePage extends PageObject {
+class ArticlePage extends PageObject {
   constructor(url, slug) {
     super(url + slug);
   }
@@ -38,5 +38,5 @@ class AntarcticlePage extends PageObject {
 module.exports = {
   Header,
   PageObject,
-  AntarcticlePage,
+  ArticlePage,
 };
