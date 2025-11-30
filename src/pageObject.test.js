@@ -3,8 +3,8 @@
 const { Header, PageObject, ArticlePage } = require('./pageObject');
 
 const logo = 'Conduit logo';
-const url = 'http://test.com';
-const slug = '/article';
+const url = 'http://test123.com';
+const slug = '/arcticle235';
 const header = new Header();
 const page = new PageObject(url);
 const articlePage = new ArticlePage(url, slug);
