@@ -20,7 +20,6 @@ class PageObject {
 class ArticlePage extends PageObject {
   constructor(url, slug) {
     super(url);
-
     this.url = `${url}/${slug}`;
   }
 
@@ -33,7 +32,7 @@ class ArticlePage extends PageObject {
   }
 
   assertPageOpened() {
-    return 'The ' + this.url + ' is opened';
+    return 'The ' + this.url + 'is opened';
   }
 }
 
